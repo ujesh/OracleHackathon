@@ -1,0 +1,71 @@
+//  
+//
+//  @ File Name : JobData.cpp
+//  @ Date : 3/21/2015
+//  @ Author : SANOJ THOMAS
+//
+#include "JobData.h"
+    
+    JobData::JobData()
+    {
+    }
+    JobData::JobData( int nFileId_i, string strFilePath_i, string strFileFtype_i, string strFileCategory_i, string strDestinationPath_i, JobType::Type jobType_E)
+    {
+        FileId = nFileId_i;
+        FilePath = strFilePath_i;
+        Filetype = strFileFtype_i;
+        FileCategory = strFileCategory_i;
+        DestinationPath = strDestinationPath_i;
+        jobType = jobType_E;
+    }
+    JobData::~JobData()
+    {
+    }
+    void JobData::setFileId(int nFileId_i) 
+    {
+        FileId = nFileId_i;
+    }
+    void JobData::setFilePath(string strFilePath_i) 
+    {
+        FilePath = strFilePath_i;
+    }
+    void JobData::setFileType( string strFileFtype_i ) 
+    {
+        FileFtype = strFileFtype_i;
+    }
+    void JobData::setFileCategory(string strFileCategory_i) 
+    {
+        FileCategory = strFileCategory_i;
+    }
+    void JobData::setDestinationPath( string strDestinationPath_i ) 
+    {
+        DestinationPath = strDestinationPath_i;
+    }
+    void JobData::setJobType( JobType::Type jobType_E) 
+    {
+        jobType = jobType_E;
+    }
+    int JobData::getFileId() const
+    {
+        return FileId;
+    }
+    string JobData::getFilePath() const
+    {
+        return FilePath;
+    }
+    string JobData::getFileType() const
+    {
+        return FileFtype;
+    }
+    string JobData::getFileCategory() const
+    {
+        return FileCategory;
+    }
+    string JobData::getDestinationPath() const
+    {
+        return DestinationPath;
+    }
+    JobType::Type JobData::getJobType() const
+    {
+        return jobType;
+    }

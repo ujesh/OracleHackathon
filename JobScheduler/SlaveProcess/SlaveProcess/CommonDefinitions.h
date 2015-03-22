@@ -1,0 +1,8 @@
+#if !defined(_COMMON_DEFINITIONS_H)
+#define _COMMON_DEFINITIONS_H
+
+const int THREAD_WAIT_TIMEOUT = 1000;
+const int NUM_WORKER_THREADS = 10;
+const int MASTER_PROCESS_ID = 0;
+
+#endif

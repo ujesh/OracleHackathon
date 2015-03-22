@@ -1,0 +1,19 @@
+#if !defined(_JOBDATA_H)
+#define _JOBDATA_H
+
+#include "FileSpecifications.h"
+#include "JobType.h"
+#include <string>
+
+class JobData {
+public:
+private:
+	std::string FilePath;
+  FileType::Type FileFtype;
+  FileCategory::Category FileCategory;
+	int FileId;
+	std::string DestinationPath;
+  JobType::Type jobType;
+};
+
+#endif  //_JOBDATA_H

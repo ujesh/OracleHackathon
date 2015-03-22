@@ -1,0 +1,39 @@
+#ifndef JOBDATA_H
+#define JOBDATA_H
+
+#include "string"
+using namespace std;
+#include "JobType.h"
+#include "FileSpecifications.h"
+
+class JobData {
+public:
+    JobType::Type jobType;
+
+private:
+    string FilePath;
+    FileType::Type Filetype;
+	string FileCategory;
+	int FileId;
+	string DestinationPath;
+public:
+    JobData();
+    JobData( int nFileId_i, string strFilePath_i, string strFileFtype_i, string strFileCategory_i, string strDestinationPath_i, JobType::Type jobType_E);
+    ~JobData();
+    void setFileId(int nFileId_i);
+    void setFilePath(string strFilePath_i) ;
+    void setFileType( string strFileFtype_i );
+    void setFileCategory(string strFileCategory_i) ;
+    void setDestinationPath( string strDestinationPath_i ) ;
+    void setJobType( JobType::Type jobType_E);
+    int getFileId() const;
+    string getFilePath() const;
+    FileType::Type getFileType() const;
+    string getFileCategory() const;
+    string getDestinationPath() const;
+    JobType::Type getJobType() const;
+};
+
+
+
+#endif  //_JOBDATA_H
